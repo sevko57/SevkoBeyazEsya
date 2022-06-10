@@ -30,7 +30,7 @@
                 <div class="col-12">
                     <div class="search-content">
                         <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type your keyword...">
+                            <input type="search" name="search" id="search" placeholder="Buraya yaz..">
                             <button type="submit"><img src="~/assets/img/core-img/search.png" alt=""></button>
                         </form>
                     </div>
@@ -46,7 +46,7 @@
         <div class="mobile-nav">
             <!-- Navbar Brand -->
             <div class="amado-navbar-brand">
-                <a href="index.html"><img src="~/assets/img/core-img/sevkologo.png" alt=""></a>
+                <a href="/Home/Index"><img src="~/assets/img/core-img/sevkologo.png" alt=""></a>
             </div>
             <!-- Navbar Toggler -->
             <div class="amado-navbar-toggler">
@@ -62,28 +62,20 @@
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href="index.html"><img src="~/assets/img/core-img/sevkologo.png" alt=""></a>
+                <a href="/Home/Index"><img src="~/assets/img/core-img/sevkologo.png" alt=""></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="product-details.html">Product</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="/Home/Index">Ana Sayfa</a></li>
+                    <li><a href="/Home/About">Hakkımızda</a></li>
+                    <li><a href="/Home/Contact">İletişim</a></li>
+                    <li><a href="/Home/Shop">Ürünler</a></li>
                 </ul>
             </nav>
-            <!-- Button Group -->
-            <div class="amado-btn-group mt-30 mb-100">
-                <a href="#" class="btn amado-btn mb-15">%Discount%</a>
-                <a href="#" class="btn amado-btn active">New this week</a>
-            </div>
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a href="cart.html" class="cart-nav"><img src="~/assets/img/core-img/cart.png" alt=""> Cart <span>(0)</span></a>
-                <a href="#" class="fav-nav"><img src="~/assets/img/core-img/favorites.png" alt=""> Favourite</a>
-                <a href="#" class="search-nav"><img src="~/assets/img/core-img/search.png" alt=""> Search</a>
+                <a href="#" class="search-nav"><img src="~/assets/img/core-img/search.png" alt=""> Arama Yap</a>
             </div>
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">
@@ -95,10 +87,10 @@
         </header>
         <!-- Header Area End -->
 
-        <div>
+        
             @RenderBody()
         </div>
-    </div>
+    
         <!-- ##### Newsletter Area Start ##### -->
         <section class="newsletter-area section-padding-100-0">
             <div class="container">
@@ -106,16 +98,16 @@
                     <!-- Newsletter Text -->
                     <div class="col-12 col-lg-6 col-xl-7">
                         <div class="newsletter-text mb-100">
-                            <h2>Subscribe for a <span>25% Discount</span></h2>
-                            <p>Nulla ac convallis lorem, eget euismod nisl. Donec in libero sit amet mi vulputate consectetur. Donec auctor interdum purus, ac finibus massa bibendum nec.</p>
+                            <h2>Abone Olursanız <span>25% İndirim</span></h2>
+                            
                         </div>
                     </div>
                     <!-- Newsletter Form -->
                     <div class="col-12 col-lg-6 col-xl-5">
                         <div class="newsletter-form mb-100">
                             <form action="#" method="post">
-                                <input type="email" name="email" class="nl-email" placeholder="Your E-mail">
-                                <input type="submit" value="Subscribe">
+                                <input type="email" name="email" class="nl-email" placeholder="E-mail">
+                                <input type="submit" value="Gönder">
                             </form>
                         </div>
                     </div>
@@ -152,20 +144,17 @@
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                                     <div class="collapse navbar-collapse" id="footerNavContent">
                                         <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item active">
-                                                <a class="nav-link" href="index.html">Home</a>
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="/Home/Index">Ana Sayfa</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="/Home/About">Hakkımızda</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link" href="/Home/Contact">İletişim</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="shop.html">Shop</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="product-details.html">Product</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="cart.html">Cart</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="checkout.html">Checkout</a>
+                                                <a class="nav-link" href="/Home/Shop">Ürünler</a>
                                             </li>
                                         </ul>
                                     </div>
