@@ -23,5 +23,6 @@ namespace SevkoBeyazEsya.Models
         public string Personel_Gorsel { get; set; }
         public int Departman_id { get; set; }
         public virtual Departman Departman { get; set; }
+        public ICollection<Satisler> Satislers { get; set; }
     }
 }

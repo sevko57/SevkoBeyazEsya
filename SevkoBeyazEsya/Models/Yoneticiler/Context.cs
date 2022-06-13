@@ -18,6 +18,12 @@ namespace SevkoBeyazEsya.Models.Yoneticiler
         public DbSet <Subeler> Subelers  { get; set; }
         public DbSet  <Urunler> Urunlers { get; set; }
         public DbSet <Yonetici> Yoneticis { get; set; }
-
+    }
+    public class VeritabaniOlustur:CreateDatabaseIfNotExists<Context>
+    {
+        protected override void Seed(Context context)
+        {
+            
+        }
     }
 }

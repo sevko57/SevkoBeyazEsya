@@ -25,8 +25,10 @@ namespace SevkoBeyazEsya.Models
         public string Urun_satisfiyat { get; set; }
         public string Urun_durum { get; set; }
         public string Urun_Gorsel { get; set; }
-        
 
+        public virtual Kategori Kategori { get; set; }
+
+        public ICollection<Satisler> Satislers { get; set; }
 
     }
 }

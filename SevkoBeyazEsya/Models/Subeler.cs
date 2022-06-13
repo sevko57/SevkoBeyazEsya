@@ -24,7 +24,8 @@ namespace SevkoBeyazEsya.Models
         [Column(TypeName = "varchar")]
         [StringLength(11)]
         public string Telefon_Numarasi  { get; set; }
-       
-       }
+        public ICollection<Satisler> Satislers { get; set; }
+
+    }
 
     }

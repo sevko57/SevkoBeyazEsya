@@ -11,8 +11,11 @@ namespace SevkoBeyazEsya.Models
     {
         [Key]
         public int Kategori_id { get; set; }
-        [Column(TypeName ="varchar")
-         [StringLength(30)]   ]
+        [Column(TypeName = "varchar")]
+        [StringLength(30)]
         public string Kategori_Adi { get; set; }
+
+        public ICollection<Urunler> Urunlers { get; set; }
+        public ICollection<Satisler> Satislers { get; set; }
     }
 }

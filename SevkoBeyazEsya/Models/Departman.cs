@@ -14,7 +14,7 @@ namespace SevkoBeyazEsya.Models
         [Column(TypeName ="varchar")]
         [StringLength(30)]
         public string Departman_adi { get; set; }
-        
 
+        public ICollection<Personel> Personels { get; set; }
     }
 }

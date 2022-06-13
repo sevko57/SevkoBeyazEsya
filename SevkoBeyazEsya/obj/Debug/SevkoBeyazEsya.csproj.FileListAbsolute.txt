@@ -314,3 +314,7 @@ C:\Users\svkty\Source\Repos\sevko57\SevkoBeyazEsya\SevkoBeyazEsya\obj\Debug\Sevk
 C:\Users\svkty\Source\Repos\sevko57\SevkoBeyazEsya\SevkoBeyazEsya\obj\Debug\SevkoBeyazEsya.csproj.CopyComplete
 C:\Users\svkty\Source\Repos\sevko57\SevkoBeyazEsya\SevkoBeyazEsya\obj\Debug\SevkoBeyazEsya.dll
 C:\Users\svkty\Source\Repos\sevko57\SevkoBeyazEsya\SevkoBeyazEsya\obj\Debug\SevkoBeyazEsya.pdb
+C:\Users\svkty\source\repos\sevko57\SevkoBeyazEsya\SevkoBeyazEsya\bin\EntityFramework.dll
+C:\Users\svkty\source\repos\sevko57\SevkoBeyazEsya\SevkoBeyazEsya\bin\EntityFramework.SqlServer.dll
+C:\Users\svkty\source\repos\sevko57\SevkoBeyazEsya\SevkoBeyazEsya\bin\EntityFramework.xml
+C:\Users\svkty\source\repos\sevko57\SevkoBeyazEsya\SevkoBeyazEsya\bin\EntityFramework.SqlServer.xml

@@ -1,0 +1,67 @@
+﻿@model SevkoBeyazEsya.Models.Kullaniciler
+
+@{
+    ViewBag.Title = "KayitOl";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!doctype html>
+<html lang="tr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/assets/loginform/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/assets/loginform/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/assets/loginform/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/assets/loginform/css/style.css">
+</head>
+<body>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-12">
+                       
+                            <form action="#" method="post">
+                                <div class="form-group first">
+                                    <label for="username">Adınız</label>
+                                    @Html.TextBoxFor(x=> x.Kullanici_Adi, new { @class = "form-control", placeholder = "Adınızı Giriniz" })
+                                    @Html.ValidationMessageFor(m=>m.Kullanici_Adi, "", new { @style = "color:red" })
+                                </div>  <div class="form-group first">
+                                    <label for="username">Soyadınız</label>
+                                          @Html.TextBoxFor(x=> x.Kullanici_Soyadi, new { @class = "form-control", placeholder = "Adınızı Giriniz" })
+                                    @Html.ValidationMessageFor(m=>m.Kullanici_Soyadi, "", new { @style = "color:red" })
+                                </div>  <div class="form-group first">
+                                    <label for="username">E-mail</label>
+                                                  @Html.TextBoxFor(x=> x.e_mail, new { @class = "form-control", placeholder = "Adınızı Giriniz" })
+                                    @Html.ValidationMessageFor(m=>m.e_mail, "", new { @style = "color:red" })
+                                </div>  <div class="form-group first">
+                                    <label for="username">Telefon Numarası</label>
+                                                 @Html.TextBoxFor(x=> x.telefon_numarasi, new { @class = "form-control", placeholder = "Adınızı Giriniz" })
+                                    @Html.ValidationMessageFor(m=>m.telefon_numarasi, "", new { @style = "color:red" })
+                                </div> 
+                                        <div class="form-group last mb-3">
+                                            <label for="password">Şifre</label>
+                                            @Html.TextBoxFor(x => x.sifre, new { @class = "form-control",type="passwords", placeholder = "Adınızı Giriniz" })
+                                            @Html.ValidationMessageFor(m => m.sifre, "", new { @style = "color:red" })
+                                        </div>
+                                <input type="submit" value="Kayıt Ol" class="btn btn-block btn-primary">
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+
+    <script src="~/assets/loginform/js/jquery-3.3.1.min.js"></script>
+    <script src="~/assets/loginform/js/popper.min.js"></script>
+    <script src="~/assets/loginform/js/bootstrap.min.js"></script>
+    <script src="~/assets/loginform/js/main.js"></script>
+</body>
+</html>
