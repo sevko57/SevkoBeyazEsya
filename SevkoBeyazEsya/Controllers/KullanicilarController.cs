@@ -63,5 +63,32 @@ namespace SevkoBeyazEsya.Controllers
             database.SaveChanges();
             return RedirectToAction("KullaniciListele", "Kullanicilar");
         }
+        public ActionResult Sil(int? kullanici_id)
+        {
+            Context database = new Context();
+            var kullanicilar = database.Kullanicilers.Find(kullanici_id);
+            database.Kullanicilers.Remove(kullanicilar);
+            database.SaveChanges();
+            return RedirectToAction("KullaniciListele");
+        }
+        public ActionResult Duzenle(int? kullanici_id)
+        {
+            Context database = new Context();
+            var kullanicilar = database.Kullanicilers.FirstOrDefault(x => x.Kullanici_id == kullanici_id);
+            return View(kullanicilar);
+        }
+        [HttpPost]
+        public ActionResult Duzenle(Kullaniciler kullanici)
+        {
+            Context database = new Context();
+            var kullanicilar = database.Kullanicilers.Find(kullanici.Kullanici_id);
+            kullanicilar.Kullanici_Adi=kullanici.Kullanici_Adi;
+            kullanicilar.Kullanici_Soyadi=kullanici.Kullanici_Soyadi;
+            kullanicilar.e_mail=kullanici.e_mail;
+            kullanicilar.telefon_numarasi=kullanici.telefon_numarasi;
+            kullanicilar.sifre=kullanici.sifre;
+            database.SaveChanges();
+            return RedirectToAction("KullaniciListele");
+        }
     }
 }

@@ -1367,6 +1367,9 @@
     <Content Include="Views\Shared\_LayoutAdminPanel.cshtml" />
     <Content Include="Views\Shared\_LayoutSubelerPanel.cshtml" />
     <Content Include="Views\Subeler\Panel.cshtml" />
+    <Content Include="Views\Kullanicilar\KullaniciListele.cshtml" />
+    <Content Include="Views\Kullanicilar\Duzenle.cshtml" />
+    <Content Include="Views\Kullanicilar\KayitEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

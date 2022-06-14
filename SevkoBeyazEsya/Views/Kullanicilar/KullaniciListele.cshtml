@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SevkoBeyazEsya.Models.Kullaniciler>
+
+@{
+    ViewBag.Title = "KullaniciListele";
+    Layout = "~/Views/Shared/_LayoutAdminPanel.cshtml";
+}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Kullanıcılar</h4>
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+
+                                <thead>
+                                    <tr>
+                                        <th> Kullanıcı ID </th>
+                                        <th> Kullanıcı Adı </th>
+                                        <th> Kullanıcı Soyadı </th>
+                                        <th> Email </th>
+                                        <th> Telefon Numarası </th>
+                                        <th> Şifre </th>
+                                    </tr>
+                                </thead>
+                                @foreach (var item in Model)
+                                {
+                                    <tbody>
+                                        <tr>
+                                            <td>@item.Kullanici_id</td>
+                                            <td>@item.Kullanici_Adi</td>
+                                            <td>@item.Kullanici_Soyadi</td>
+                                            <td>@item.e_mail</td>
+                                            <td>@item.telefon_numarasi</td>
+                                            <td>@item.sifre</td>
+                                            <td>@Html.ActionLink("Düzenle", "/Duzenle", new { kullanici_id = item.Kullanici_id })</td>
+                                            <td>@Html.ActionLink("Sil", "/Sil", new { kullanici_id = item.Kullanici_id })</td>
+                                        </tr>
+                                    </tbody>
+                                }
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
