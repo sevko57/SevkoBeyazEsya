@@ -1,0 +1,39 @@
+﻿@model SevkoBeyazEsya.Models.Giderler
+
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_LayoutSubelerPanel.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-description">Gider Ekle</p>
+                            <form class="forms-sample">
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Açıklama</label>
+                                    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail3">Tutar</label>
+                                    @Html.TextBoxFor(x => x.Tutar, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Tarih</label>
+                                    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+                                </div>
+                                <button type="submit" class="btn btn-primary mr-2">Ekle</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

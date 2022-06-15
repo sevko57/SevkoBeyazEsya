@@ -127,8 +127,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DepartmanController.cs" />
+    <Compile Include="Controllers\FaturalarController.cs" />
+    <Compile Include="Controllers\GiderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KategorilerController.cs" />
     <Compile Include="Controllers\KullanicilarController.cs" />
+    <Compile Include="Controllers\PersonelController.cs" />
     <Compile Include="Controllers\SubelerController.cs" />
     <Compile Include="Controllers\UrunlerController.cs" />
     <Compile Include="Controllers\YoneticiController.cs" />
@@ -1370,10 +1374,27 @@
     <Content Include="Views\Kullanicilar\KullaniciListele.cshtml" />
     <Content Include="Views\Kullanicilar\Duzenle.cshtml" />
     <Content Include="Views\Kullanicilar\KayitEkle.cshtml" />
+    <Content Include="Views\Departman\Listele.cshtml" />
+    <Content Include="Views\Departman\Ekle.cshtml" />
+    <Content Include="Views\Departman\Duzenle.cshtml" />
+    <Content Include="Views\Faturalar\Listele.cshtml" />
+    <Content Include="Views\Faturalar\Ekle.cshtml" />
+    <Content Include="Views\Faturalar\Duzenle.cshtml" />
+    <Content Include="Views\Gider\Listele.cshtml" />
+    <Content Include="Views\Gider\Ekle.cshtml" />
+    <Content Include="Views\Gider\Duzenle.cshtml" />
+    <Content Include="Views\Subeler\Listele.cshtml" />
+    <Content Include="Views\Subeler\Ekle.cshtml" />
+    <Content Include="Views\Subeler\Duzenle.cshtml" />
+    <Content Include="Views\Yonetici\Listele.cshtml" />
+    <Content Include="Views\Yonetici\Ekle.cshtml" />
+    <Content Include="Views\Yonetici\Duzenle.cshtml" />
+    <Content Include="Views\Personel\Listele.cshtml" />
+    <Content Include="Views\Personel\Getir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Departman\" />
+    <Folder Include="Views\Kategoriler\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

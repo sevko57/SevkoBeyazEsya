@@ -1,0 +1,60 @@
+﻿@model SevkoBeyazEsya.Models.Faturalar
+
+@{
+    ViewBag.Title = "Duzenle";
+    Layout = "~/Views/Shared/_LayoutSubelerPanel.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="main-panel">
+        <div class="content-wrapper">
+            @Html.HiddenFor(m => m.Fatura_id)
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-description">Fatura Düzenle</p>
+                            <form class="forms-sample">
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Seri No</label>
+                                    @Html.TextBoxFor(x => x.FaturaSeri_no, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail3">Sıra No</label>
+                                    @Html.TextBoxFor(x => x.FaturaSira_no, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Tarih</label>
+                                    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Vergi Dairesi</label>
+                                    @Html.TextBoxFor(x => x.Vergi_dairesi, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Saat</label>
+                                    @Html.TextBoxFor(x => x.saat, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Teslim Eden</label>
+                                    @Html.TextBoxFor(x => x.Teslim_eden, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Teslim Alan</label>
+                                    @Html.TextBoxFor(x => x.Teslim_alan, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Toplam Fiyat</label>
+                                    @Html.TextBoxFor(x => x.ToplamFiyat, new { @class = "form-control" })
+                                </div>
+                                <button type="submit" class="btn btn-primary mr-2">Düzenle</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

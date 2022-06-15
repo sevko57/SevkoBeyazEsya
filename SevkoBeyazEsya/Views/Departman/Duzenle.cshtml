@@ -1,0 +1,32 @@
+﻿@model SevkoBeyazEsya.Models.Departman
+
+@{
+    ViewBag.Title = "Duzenle";
+    Layout = "~/Views/Shared/_LayoutSubelerPanel.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="main-panel">
+        <div class="content-wrapper">
+            @Html.HiddenFor(m => m.Departman_id)
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-description">Departman Düzenle</p>
+                            <form class="forms-sample">
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Departman Adı</label>
+                                    @Html.TextBoxFor(x => x.Departman_adi, new { @class = "form-control" })
+                                </div>
+                                <button type="submit" class="btn btn-primary mr-2">Düzenle</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

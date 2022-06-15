@@ -1,0 +1,42 @@
+﻿@model SevkoBeyazEsya.Models.Personel
+
+@{
+    ViewBag.Title = "Getir";
+    Layout = "~/Views/Shared/_LayoutSubelerPanel.cshtml";
+}
+
+@using (Html.BeginForm("Duzenle","Personel",FormMethod.Post))
+{
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-description">Personel Düzenle</p>
+                            <form class="forms-sample">
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Ad</label>
+                                    @Html.TextBoxFor(x => x.Personel_adi, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail3">Soyad</label>
+                                    @Html.TextBoxFor(x => x.Personel_Soyadi, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Görsel</label>
+                                    @Html.TextBoxFor(x => x.Personel_Gorsel, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Departman</label>
+                                    @Html.DropDownListFor(x => x.Departman_id, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+                                </div>
+                                <button class="btn btn-primary mr-2">Düzenle</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,39 @@
+﻿@model SevkoBeyazEsya.Models.Yonetici
+
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_LayoutAdminPanel.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-description">Yönetici Ekle</p>
+                            <form class="forms-sample">
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Ad</label>
+                                    @Html.TextBoxFor(x => x.Yonetici_adi, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail3">Şifre</label>
+                                    @Html.TextBoxFor(x => x.sifre, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Yetki</label>
+                                    @Html.TextBoxFor(x => x.yetki, new { @class = "form-control" })
+                                </div>
+                                <button type="submit" class="btn btn-primary mr-2">Ekle</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
