@@ -30,5 +30,21 @@ namespace SevkoBeyazEsya.Controllers
         {
             return View();
         }
+        public ActionResult Sayfa404()
+        {
+            Response.StatusCode = 404;
+            Response.TrySkipIisCustomErrors = true;
+            return View();
+        }public ActionResult Sayfa403()
+        {
+            Response.StatusCode = 403;
+            Response.TrySkipIisCustomErrors = true;
+            return View();
+        }public ActionResult Sayfa500()
+        {
+            Response.StatusCode = 500;
+            Response.TrySkipIisCustomErrors = true;
+            return View();
+        }
     }
 }

@@ -31,8 +31,8 @@
                                             <td>@item.Personel_adi</td>
                                             <td>@item.Personel_Soyadi</td>
                                             <td>@item.Departman.Departman_adi</td>
-                                            <td>@Html.ActionLink("Düzenle", "/Getir", new { personel_id = item.Personel_id })</td>
-                                            <td>@Html.ActionLink("Sil", "/Sil", new { personel_id = item.Personel_id })</td>
+                                            <td><a href="/Personel/Getir/@item.Personel_id">Düzenle</a></td>
+                                            <td><a href="/Personel/Sil/@item.Personel_id">Sil</a></td>
                                         </tr>
                                     </tbody>
                                 }

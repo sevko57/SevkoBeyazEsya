@@ -1391,6 +1391,9 @@
     <Content Include="Views\Yonetici\Duzenle.cshtml" />
     <Content Include="Views\Personel\Listele.cshtml" />
     <Content Include="Views\Personel\Getir.cshtml" />
+    <Content Include="Views\Home\Sayfa404.cshtml" />
+    <Content Include="Views\Home\Sayfa500.cshtml" />
+    <Content Include="Views\Home\Sayfa403.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

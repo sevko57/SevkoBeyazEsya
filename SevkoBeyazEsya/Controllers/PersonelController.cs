@@ -41,7 +41,7 @@ namespace SevkoBeyazEsya.Controllers
             database.SaveChanges();
             return RedirectToAction("Listele");
         }
-        public ActionResult Getir(int? personel_id)
+        public ActionResult Getir(int id)
         {
             List<SelectListItem> deger1 = (from x in database.Departmans.ToList()
                                            select new SelectListItem
@@ -50,10 +50,10 @@ namespace SevkoBeyazEsya.Controllers
                                                Value = x.Departman_id.ToString()
                                            }).ToList();
             ViewBag.dgr1 = deger1;
-            var prs = database.Personels.Find(personel_id);
+            var prs = database.Personels.Find(id);
             return View("Getir", prs);
         }
-        [HttpPost]
+        
         public ActionResult Duzenle(Personel personel)
         {
             var personeller = database.Personels.Find(personel.Personel_id);
