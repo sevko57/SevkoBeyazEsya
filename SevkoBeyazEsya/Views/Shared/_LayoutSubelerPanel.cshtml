@@ -83,7 +83,7 @@
                     <span class="nav-link">Sayfalar</span>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="/Yonetici/Panel">
+                    <a class="nav-link" href="/Subeler/Panel">
                         <span class="menu-icon">
                             <i class="mdi mdi-speedometer"></i>
                         </span>
@@ -91,15 +91,22 @@
                     </a>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="/Departman/Index">
+                    <a class="nav-link" data-toggle="collapse" href="#depart" aria-expanded="false" aria-controls="ui-depart">
                         <span class="menu-icon">
-                            <i class="mdi mdi-speedometer"></i>
+                            <i class="mdi mdi-laptop"></i>
                         </span>
                         <span class="menu-title">Departman</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="collapse" id="depart">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="/Departman/Listele">Departman Listele</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Departman/Ekle">Departman Ekle</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" data-toggle="collapse" href="#fatura" aria-expanded="false" aria-controls="ui-basic">
+                    <a class="nav-link" data-toggle="collapse" href="#fatura" aria-expanded="false" aria-controls="ui-fatura">
                         <span class="menu-icon">
                             <i class="mdi mdi-laptop"></i>
                         </span>
@@ -114,70 +121,92 @@
                     </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-gider" aria-expanded="false" aria-controls="ui-basic">
                         <span class="menu-icon">
                             <i class="mdi mdi-laptop"></i>
                         </span>
                         <span class="menu-title">Giderler</span>
                         <i class="menu-arrow"></i>
                     </a>
-                    <div class="collapse" id="ui-basic">
+                    <div class="collapse" id="ui-gider">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="/Kullanicilar/KullaniciListele">Gider Listele</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="/Kullanicilar/">Gider Ekle</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Gider/Listele">Gider Listele</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Gider/Ekle/">Gider Ekle</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="/Yonetici/YoneticiListele">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-kategori" aria-expanded="false" aria-controls="ui-basic">
                         <span class="menu-icon">
-                            <i class="mdi mdi-playlist-play"></i>
+                            <i class="mdi mdi-laptop"></i>
                         </span>
-                        <span class="menu-title">Kategoriler</span>
+                        <span class="menu-title">Giderler</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="collapse" id="ui-kategori">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="/Kategori/Listele">Kategori Listele</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Kategori/Ekle">Kategori Ekle</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-personel" aria-expanded="false" aria-controls="ui-basic">
                         <span class="menu-icon">
                             <i class="mdi mdi-laptop"></i>
                         </span>
                         <span class="menu-title">Personel</span>
                         <i class="menu-arrow"></i>
                     </a>
-                    <div class="collapse" id="ui-basic">
+                    <div class="collapse" id="ui-personel">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="/Kullanicilar/KullaniciListele">Personel Listele</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="/Kullanicilar/">Personel Ekle</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Personel/Listele">Personel Listele</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Personel/Ekle">Personel Ekle</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-satis" aria-expanded="false" aria-controls="ui-basic">
                         <span class="menu-icon">
                             <i class="mdi mdi-laptop"></i>
                         </span>
                         <span class="menu-title">Satışlar</span>
                         <i class="menu-arrow"></i>
                     </a>
-                    <div class="collapse" id="ui-basic">
+                    <div class="collapse" id="ui-satis">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="/Kullanicilar/KullaniciListele">Satış Listele</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="/Kullanicilar/">Satış Ekle</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Satis/Listele">Satış Listele</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Satis/Ekle">Satış Ekle</a></li>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-urun" aria-expanded="false" aria-controls="ui-basic">
                         <span class="menu-icon">
                             <i class="mdi mdi-laptop"></i>
                         </span>
                         <span class="menu-title">Ürünler</span>
                         <i class="menu-arrow"></i>
                     </a>
-                    <div class="collapse" id="ui-basic">
+                    <div class="collapse" id="ui-urun">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="/Kullanicilar/KullaniciListele">Ürün Listele</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="/Kullanicilar/">Ürün Ekle</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Urunler/UrunListele">Ürün Listele</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Urunler/UrunEkle">Ürün Ekle</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-sube" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-laptop"></i>
+                        </span>
+                        <span class="menu-title">Şubeler</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-sube">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="/Subeler/Listele">Şube Listele</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/Subeler/Ekle">Şube Ekle</a></li>
                         </ul>
                     </div>
                 </li>

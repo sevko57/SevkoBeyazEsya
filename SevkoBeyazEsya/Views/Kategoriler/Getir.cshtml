@@ -1,0 +1,32 @@
+﻿@model SevkoBeyazEsya.Models.Kategori
+
+@{
+    ViewBag.Title = "Getir";
+    Layout = "~/Views/Shared/_LayoutSubelerPanel.cshtml";
+}
+
+@using (Html.BeginForm("Duzenle", "Kategoriler", FormMethod.Post))
+{
+    <div class="main-panel">
+        <div class="content-wrapper">
+           
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-description">Kategori Düzenle</p>
+                            <form class="forms-sample">
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Kategori Ad</label>
+                                    @Html.TextBoxFor(x => x.Kategori_Adi, new { @class = "form-control" })
+                                    @Html.HiddenFor(x => x.Kategori_id)
+                                </div>
+                                <button class="btn btn-primary mr-2">Düzenle</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

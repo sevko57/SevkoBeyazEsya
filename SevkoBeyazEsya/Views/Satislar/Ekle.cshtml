@@ -1,0 +1,58 @@
+﻿@model SevkoBeyazEsya.Models.Satisler
+
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_LayoutSubelerPanel.cshtml";
+}
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-description">Satış Ekle</p>
+                            <form class="forms-sample">
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Ürün Adı</label>
+                                    @Html.DropDownListFor(x => x.Urun_id, (List<SelectListItem>)ViewBag.urunler, "Ürün Seçin", new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail3">Personel Adı</label>
+                                    @Html.DropDownListFor(x => x.Personel_id, (List<SelectListItem>)ViewBag.personel, "Personel Seçin", new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Şube Adı</label>
+                                    @Html.DropDownListFor(x => x.Sube_id, (List<SelectListItem>)ViewBag.subeler, "Şube Seçin", new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Kategori Adı</label>
+                                    @Html.DropDownListFor(x => x.Kategori_id, (List<SelectListItem>)ViewBag.personel, "Kategori Seçin", new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Tarih</label>
+                                    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Adet</label>
+                                    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Fiyat</label>
+                                    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword4">Toplam Tutar</label>
+                                    @Html.TextBoxFor(x => x.ToplamTutar, new { @class = "form-control" })
+                                </div>
+                                <button class="btn btn-primary mr-2">Ekle</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

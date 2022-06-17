@@ -21,23 +21,24 @@ namespace SevkoBeyazEsya.Controllers
         {
             return View();
         }
+        [HttpPost]
         public ActionResult Ekle(Kategori kategori)
         {
             database.Kategoris.Add(kategori);
             database.SaveChanges();
             return RedirectToAction("Listele");
         }
-        public ActionResult Sil(int? kategori_id)
+        public ActionResult Sil(int kategori_id)
         {
             var kategoriler = database.Kategoris.Find(kategori_id);
             database.Kategoris.Remove(kategoriler);
             database.SaveChanges();
             return RedirectToAction("Listele");
         }
-        public ActionResult Duzenle(int? kategori_id)
+        public ActionResult Getir(int id)
         {
-            var kategoriler = database.Kategoris.FirstOrDefault(x => x.Kategori_id == kategori_id);
-            return View(kategoriler);
+            var ktg = database.Kategoris.Find(id);
+            return View("Getir",ktg);
         }
         [HttpPost]
         public ActionResult Duzenle(Kategori kategori)

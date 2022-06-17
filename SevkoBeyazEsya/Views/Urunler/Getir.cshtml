@@ -1,0 +1,72 @@
+﻿@model SevkoBeyazEsya.Models.Urunler
+
+@{
+    ViewBag.Title = "Getir";
+    Layout = "~/Views/Shared/_LayoutSubelerPanel.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Urunler", FormMethod.Post))
+{
+    <div class="main-panel">
+        <div class="content-wrapper">
+            @Html.HiddenFor(x => x.Urun_id)
+            <div class="row">
+                <div class="col-12 grid-margin stretch-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-description">Ürün Düzenle</p>
+                            <form class="forms-sample">
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Ürün Ad</label>
+                                    @Html.TextBoxFor(x => x.Urun_adi, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Ürün Marka</label>
+                                    @Html.TextBoxFor(x => x.Urun_marka, new { @class = "form-control" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Alış Fiyat</label>
+                                    @Html.TextBoxFor(x => x.Urun_alisfiyat, new { @class = "form-control" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Satış Fiyat</label>
+                                    @Html.TextBoxFor(x => x.Urun_satisfiyat, new { @class = "form-control" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Durum</label>
+                                    @Html.DropDownListFor(x =>x.Urun_durum , new List<SelectListItem>
+               {new SelectListItem
+               {
+                       Text="Aktif",
+                       Value=true.ToString(),
+                   },
+                   new SelectListItem
+               {
+                       Text="Pasif",
+                       Value=false.ToString(),
+                   }
+               }, "Durumu Seçiniz", new { @class = "form-select" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Görsel</label>
+                                    @Html.TextBoxFor(x => x.Urun_Gorsel, new { @class = "form-control" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Kategori</label>
+                                    @Html.DropDownListFor(x => x.Kategori.Kategori_id, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+
+                                </div>
+                                <button class="btn btn-primary mr-2">Düzenle</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

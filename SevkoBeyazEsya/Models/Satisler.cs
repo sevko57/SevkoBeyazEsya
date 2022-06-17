@@ -26,9 +26,5 @@ namespace SevkoBeyazEsya.Models
         public string Adet { get; set; }
         public decimal Fiyat { get; set; }
         public decimal ToplamTutar { get; set; }
-
     }
-
-
-       
 }

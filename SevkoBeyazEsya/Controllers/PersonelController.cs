@@ -28,6 +28,7 @@ namespace SevkoBeyazEsya.Controllers
             ViewBag.dgr1 = deger1;
             return View();
         }
+        [HttpPost]
         public ActionResult Ekle(Personel personel)
         {
             database.Personels.Add(personel);

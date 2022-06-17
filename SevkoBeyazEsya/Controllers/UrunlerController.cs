@@ -20,6 +20,14 @@ namespace SevkoBeyazEsya.Controllers
         [HttpGet]
         public ActionResult UrunEkle()
         {
+            List<SelectListItem> kategoriler=(from x in database.Kategoris.ToList()
+                                              select new SelectListItem
+                                              {
+                                                  Text=x.Kategori_Adi,
+                                                  Value=x.Kategori_id.ToString()
+                                              }
+                                              ).ToList();
+            ViewBag.kategori = kategoriler;
             return View();
         }
         [HttpPost]
@@ -30,28 +38,39 @@ namespace SevkoBeyazEsya.Controllers
             return RedirectToAction("Index", "Urunler");
         }
         [HttpGet]
-        public ActionResult UrunGuncelle()
+        public ActionResult Getir(int id)
         {
-            return View();
+            List<SelectListItem> deger1 = (from x in database.Kategoris.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.Kategori_Adi,
+                                               Value = x.Kategori_id.ToString()
+                                           }).ToList();
+            ViewBag.dgr1 = deger1;
+            var urundeger = database.Urunlers.Find(id);
+            return View("Getir", urundeger);
         }
         [HttpPost]
-        public ActionResult UrunGuncelle(Urunler urunler)
+        public ActionResult Guncelle(Urunler urunler)
         {
-            database.Urunlers.Add(urunler);
+            var urn = database.Urunlers.Find(urunler.Urun_id);
+            urn.Urun_adi = urunler.Urun_adi;
+            urn.Urun_marka = urunler.Urun_marka;
+            urn.Urun_stok = urunler.Urun_stok;
+            urn.Urun_alisfiyat = urunler.Urun_alisfiyat;
+            urn.Urun_satisfiyat = urunler.Urun_satisfiyat;
+            urn.Urun_durum = urunler.Urun_durum;
+            urn.Urun_Gorsel = urunler.Urun_Gorsel;
+            urn.Kategori.Kategori_id = urunler.Kategori.Kategori_id;
             database.SaveChanges();
-            return RedirectToAction("Index", "Urunler");
+            return RedirectToAction("UrunListele");
         }
-        [HttpGet]
-        public ActionResult UrunSil()
+        public ActionResult UrunSil(int id)
         {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult UrunSil(Urunler urunler)
-        {
+            var urunler = database.Urunlers.Find(id);
             database.Urunlers.Remove(urunler);
             database.SaveChanges();
-            return RedirectToAction("Index", "Urunler");
+            return RedirectToAction("UrunListele");
         }
         public ActionResult UrunListele()
         {

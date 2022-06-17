@@ -133,6 +133,7 @@
     <Compile Include="Controllers\KategorilerController.cs" />
     <Compile Include="Controllers\KullanicilarController.cs" />
     <Compile Include="Controllers\PersonelController.cs" />
+    <Compile Include="Controllers\SatislarController.cs" />
     <Compile Include="Controllers\SubelerController.cs" />
     <Compile Include="Controllers\UrunlerController.cs" />
     <Compile Include="Controllers\YoneticiController.cs" />
@@ -1394,10 +1395,19 @@
     <Content Include="Views\Home\Sayfa404.cshtml" />
     <Content Include="Views\Home\Sayfa500.cshtml" />
     <Content Include="Views\Home\Sayfa403.cshtml" />
+    <Content Include="Views\Personel\Ekle.cshtml" />
+    <Content Include="Views\Kategoriler\Listele.cshtml" />
+    <Content Include="Views\Kategoriler\Ekle.cshtml" />
+    <Content Include="Views\Kategoriler\Getir.cshtml" />
+    <Content Include="Views\Urunler\UrunListele.cshtml" />
+    <Content Include="Views\Urunler\Getir.cshtml" />
+    <Content Include="Views\Urunler\UrunEkle.cshtml" />
+    <Content Include="Views\Satislar\Listele.cshtml" />
+    <Content Include="Views\Satislar\Ekle.cshtml" />
+    <Content Include="Views\Satislar\Getir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Kategoriler\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
