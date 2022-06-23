@@ -29,7 +29,7 @@
                                             <td>@item.Departman_adi</td>
                                             
                                             <td>@Html.ActionLink("Düzenle", "/Duzenle", new { departmanid = item.Departman_id })</td>
-                                            <td>@Html.ActionLink("Sil", "/Sil", new { departmanid = item.Departman_id })</td>
+                                            <td>@Html.ActionLink("Sil", "/Sil", new { @class = "btn btn-warning", onclick = "return confirm='Silmek istediğinize emin misiniz?'" }, new { departmanid = item.Departman_id })</td>
                                         </tr>
                                     </tbody>
                                 }
